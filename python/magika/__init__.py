@@ -23,6 +23,9 @@ Example usage:
     >>> result = m.identify_bytes(b"# Hello\nprint('world')")
     >>> print(result.output.label)
     python
+
+Note: Also export MagikaConfig for easier access to configuration options
+without needing to dig into submodules.
 """
 
 from magika.magika import Magika
@@ -36,7 +39,8 @@ from magika.types import (
     MagikaError,
 )
 
-__version__ = "0.6.1"
+# Personal fork: bumped version string to track local changes
+__version__ = "0.6.1.post1"
 __all__ = [
     "Magika",
     "MagikaResult",
